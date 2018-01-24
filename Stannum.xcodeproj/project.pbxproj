@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		2F08D989201882D2002D3540 /* Stannum.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F08D987201882D2002D3540 /* Stannum.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2F08D99120188324002D3540 /* XCUIElementExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F08D99020188324002D3540 /* XCUIElementExtension.swift */; };
+		2F08D99320188F21002D3540 /* XCUIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F08D99220188F21002D3540 /* XCUIApplicationExtension.swift */; };
+		2F08D99520189168002D3540 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F08D99420189168002D3540 /* StringExtension.swift */; };
+		2F08D99720189263002D3540 /* Springboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F08D99620189263002D3540 /* Springboard.swift */; };
 		8523D8CFC79E8001BA78D4B5 /* Pods_Stannum.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEB37DA949C20ADB11FC12D5 /* Pods_Stannum.framework */; };
 /* End PBXBuildFile section */
 
@@ -17,6 +20,9 @@
 		2F08D987201882D2002D3540 /* Stannum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Stannum.h; sourceTree = "<group>"; };
 		2F08D988201882D2002D3540 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F08D99020188324002D3540 /* XCUIElementExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCUIElementExtension.swift; sourceTree = "<group>"; };
+		2F08D99220188F21002D3540 /* XCUIApplicationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCUIApplicationExtension.swift; sourceTree = "<group>"; };
+		2F08D99420189168002D3540 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		2F08D99620189263002D3540 /* Springboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Springboard.swift; sourceTree = "<group>"; };
 		9FCE0DACB00A2C9DF803259D /* Pods-Stannum.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stannum.release.xcconfig"; path = "Pods/Target Support Files/Pods-Stannum/Pods-Stannum.release.xcconfig"; sourceTree = "<group>"; };
 		AEB37DA949C20ADB11FC12D5 /* Pods_Stannum.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stannum.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E743BA6C03DB4A0136D3B824 /* Pods-Stannum.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stannum.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Stannum/Pods-Stannum.debug.xcconfig"; sourceTree = "<group>"; };
@@ -75,6 +81,9 @@
 			isa = PBXGroup;
 			children = (
 				2F08D99020188324002D3540 /* XCUIElementExtension.swift */,
+				2F08D99220188F21002D3540 /* XCUIApplicationExtension.swift */,
+				2F08D99420189168002D3540 /* StringExtension.swift */,
+				2F08D99620189263002D3540 /* Springboard.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -206,6 +215,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F08D99120188324002D3540 /* XCUIElementExtension.swift in Sources */,
+				2F08D99320188F21002D3540 /* XCUIApplicationExtension.swift in Sources */,
+				2F08D99520189168002D3540 /* StringExtension.swift in Sources */,
+				2F08D99720189263002D3540 /* Springboard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

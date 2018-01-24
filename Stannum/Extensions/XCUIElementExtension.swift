@@ -11,20 +11,19 @@ import XCTest
 extension XCUIElement {
     
     public func clearAndEnterText(text: String) {
+        
         guard let stringValue = self.value as? String else {
             self.typeText(text)
-            //            XCTFail("Tried to clear and enter text into a non string value")
             return
         }
         
-        // text field is already empty
         if stringValue.isEmpty {
             self.typeText(text)
             return
         }
         
         self.tap()
-        let deleteString = stringValue.characters.map {
+        let deleteString = stringValue.map {
             _ in XCUIKeyboardKey.delete.rawValue }.joined(separator: "") // fix
         
         self.typeText(deleteString)
