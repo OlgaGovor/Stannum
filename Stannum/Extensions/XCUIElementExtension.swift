@@ -35,4 +35,14 @@ extension XCUIElement {
         let expectation = XCTNSPredicateExpectation(predicate: predicate, object: self)
         return XCTWaiter().wait(for: [expectation], timeout: timeout) == .completed
     }
+    
+    func forceTap(){
+        if self.isHittable {
+            self.tap()
+        } else {
+            let coordinate: XCUICoordinate = self.coordinate(
+                withNormalizedOffset: CGVectorFromString("{0.0,0.0}"))
+            coordinate.tap()
+        }
+    }
 }
