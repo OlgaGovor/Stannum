@@ -8,12 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		2F08D989201882D2002D3540 /* Stannum.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F08D987201882D2002D3540 /* Stannum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2F08D99120188324002D3540 /* XCUIElementExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F08D99020188324002D3540 /* XCUIElementExtension.swift */; };
+		8523D8CFC79E8001BA78D4B5 /* Pods_Stannum.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEB37DA949C20ADB11FC12D5 /* Pods_Stannum.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2F08D984201882D2002D3540 /* Stannum.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Stannum.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F08D987201882D2002D3540 /* Stannum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Stannum.h; sourceTree = "<group>"; };
 		2F08D988201882D2002D3540 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F08D99020188324002D3540 /* XCUIElementExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCUIElementExtension.swift; sourceTree = "<group>"; };
+		9FCE0DACB00A2C9DF803259D /* Pods-Stannum.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stannum.release.xcconfig"; path = "Pods/Target Support Files/Pods-Stannum/Pods-Stannum.release.xcconfig"; sourceTree = "<group>"; };
+		AEB37DA949C20ADB11FC12D5 /* Pods_Stannum.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stannum.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E743BA6C03DB4A0136D3B824 /* Pods-Stannum.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stannum.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Stannum/Pods-Stannum.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -21,17 +27,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8523D8CFC79E8001BA78D4B5 /* Pods_Stannum.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		258E2CF3F07341ED4BF982E5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E743BA6C03DB4A0136D3B824 /* Pods-Stannum.debug.xcconfig */,
+				9FCE0DACB00A2C9DF803259D /* Pods-Stannum.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		2F08D97A201882D2002D3540 = {
 			isa = PBXGroup;
 			children = (
 				2F08D986201882D2002D3540 /* Stannum */,
 				2F08D985201882D2002D3540 /* Products */,
+				258E2CF3F07341ED4BF982E5 /* Pods */,
+				A89C4301261F358488067A06 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -46,10 +64,27 @@
 		2F08D986201882D2002D3540 /* Stannum */ = {
 			isa = PBXGroup;
 			children = (
+				2F08D98F201882FC002D3540 /* Extensions */,
 				2F08D987201882D2002D3540 /* Stannum.h */,
 				2F08D988201882D2002D3540 /* Info.plist */,
 			);
 			path = Stannum;
+			sourceTree = "<group>";
+		};
+		2F08D98F201882FC002D3540 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2F08D99020188324002D3540 /* XCUIElementExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A89C4301261F358488067A06 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AEB37DA949C20ADB11FC12D5 /* Pods_Stannum.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -70,10 +105,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2F08D98C201882D2002D3540 /* Build configuration list for PBXNativeTarget "Stannum" */;
 			buildPhases = (
+				FD279404B4C91850566A4E01 /* [CP] Check Pods Manifest.lock */,
 				2F08D97F201882D2002D3540 /* Sources */,
 				2F08D980201882D2002D3540 /* Frameworks */,
 				2F08D981201882D2002D3540 /* Headers */,
 				2F08D982201882D2002D3540 /* Resources */,
+				BC2B30A8BE6849B0E807D8E3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -95,6 +132,7 @@
 				TargetAttributes = {
 					2F08D983201882D2002D3540 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -126,11 +164,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		BC2B30A8BE6849B0E807D8E3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Stannum/Pods-Stannum-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD279404B4C91850566A4E01 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Stannum-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2F08D97F201882D2002D3540 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F08D99120188324002D3540 /* XCUIElementExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,6 +247,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -232,6 +308,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -252,7 +329,9 @@
 		};
 		2F08D98D201882D2002D3540 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E743BA6C03DB4A0136D3B824 /* Pods-Stannum.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -266,6 +345,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ru.qa42.Stannum;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -273,7 +353,9 @@
 		};
 		2F08D98E201882D2002D3540 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9FCE0DACB00A2C9DF803259D /* Pods-Stannum.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;

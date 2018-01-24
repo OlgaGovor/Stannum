@@ -1,0 +1,39 @@
+//
+//  XCUIElementExtension.swift
+//  Stannum
+//
+//  Created by Olga Govor on 24/01/2018.
+//  Copyright © 2018 Olga Govor. All rights reserved.
+//
+
+import XCTest
+
+extension XCUIElement {
+    
+    public func clearAndEnterText(text: String) {
+        guard let stringValue = self.value as? String else {
+            self.typeText(text)
+            //            XCTFail("Tried to clear and enter text into a non string value")
+            return
+        }
+        
+        // text field is already empty
+        if stringValue.isEmpty {
+            self.typeText(text)
+            return
+        }
+        
+        self.tap()
+        let deleteString = stringValue.characters.map {
+            _ in XCUIKeyboardKey.delete.rawValue }.joined(separator: "") // fix
+        
+        self.typeText(deleteString)
+        self.typeText(text)
+    }
+    
+    public func waitForHittable(timeout: TimeInterval = 10) -> Bool {
+        let predicate = NSPredicate(format: "hittable == 1")
+        let expectation = XCTNSPredicateExpectation(predicate: predicate, object: self)
+        return XCTWaiter().wait(for: [expectation], timeout: timeout) == .completed
+    }
+}
