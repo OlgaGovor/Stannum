@@ -15,6 +15,7 @@
 		2F08D99B2018A5F4002D3540 /* XCUIElementQueryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F08D99A2018A5F4002D3540 /* XCUIElementQueryExtension.swift */; };
 		2F08D99D2018E508002D3540 /* XCTestCaseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F08D99C2018E508002D3540 /* XCTestCaseExtension.swift */; };
 		2F08D9A22019D720002D3540 /* TestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F08D9A12019D720002D3540 /* TestApp.swift */; };
+		2F08D9A9201B5ABE002D3540 /* SettingsUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F08D9A8201B5ABD002D3540 /* SettingsUtils.swift */; };
 		8523D8CFC79E8001BA78D4B5 /* Pods_Stannum.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEB37DA949C20ADB11FC12D5 /* Pods_Stannum.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		2F08D99A2018A5F4002D3540 /* XCUIElementQueryExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCUIElementQueryExtension.swift; sourceTree = "<group>"; };
 		2F08D99C2018E508002D3540 /* XCTestCaseExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestCaseExtension.swift; sourceTree = "<group>"; };
 		2F08D9A12019D720002D3540 /* TestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestApp.swift; sourceTree = "<group>"; };
+		2F08D9A8201B5ABD002D3540 /* SettingsUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsUtils.swift; sourceTree = "<group>"; };
 		9FCE0DACB00A2C9DF803259D /* Pods-Stannum.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stannum.release.xcconfig"; path = "Pods/Target Support Files/Pods-Stannum/Pods-Stannum.release.xcconfig"; sourceTree = "<group>"; };
 		AEB37DA949C20ADB11FC12D5 /* Pods_Stannum.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stannum.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E743BA6C03DB4A0136D3B824 /* Pods-Stannum.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stannum.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Stannum/Pods-Stannum.debug.xcconfig"; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 			children = (
 				2F08D9A12019D720002D3540 /* TestApp.swift */,
 				2F08D99620189263002D3540 /* Springboard.swift */,
+				2F08D9A8201B5ABD002D3540 /* SettingsUtils.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F08D9A9201B5ABE002D3540 /* SettingsUtils.swift in Sources */,
 				2F08D99120188324002D3540 /* XCUIElementExtension.swift in Sources */,
 				2F08D9A22019D720002D3540 /* TestApp.swift in Sources */,
 				2F08D99320188F21002D3540 /* XCUIApplicationExtension.swift in Sources */,
@@ -371,6 +375,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Stannum/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -395,6 +400,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Stannum/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
