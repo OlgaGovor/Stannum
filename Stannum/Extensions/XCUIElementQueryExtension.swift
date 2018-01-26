@@ -14,8 +14,13 @@ extension XCUIElementQuery {
         return query
     }
     
-    public func identificatorContains(text: String) -> XCUIElementQuery {
+    public func idContains(text: String) -> XCUIElementQuery {
         let query = self.containing(NSPredicate(format: "identificator CONTAINS %@", text))
+        return query
+    }
+    
+    public func textContains(text: String) -> XCUIElementQuery {
+        let query = self.containing(NSPredicate(format: "text CONTAINS %@", text))
         return query
     }
 }

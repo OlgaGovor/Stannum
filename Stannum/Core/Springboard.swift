@@ -8,7 +8,7 @@
 
 import XCTest
 
-public class Springboard {
+open class Springboard {
     
     public init() {}
     
