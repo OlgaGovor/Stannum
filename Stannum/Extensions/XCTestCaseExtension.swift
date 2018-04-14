@@ -10,6 +10,13 @@ import XCTest
 
 extension XCTestCase {
     
+    /**
+     Extension to XCTestCase
+     
+     Activate/launch an application with specific bundle identificator
+     
+     - Parameter bundleId: bundle identificator of an application to launch
+     */
     func activateAppByBundleId(bundleId: String) {
         let app = XCUIApplication(bundleIdentifier: bundleId)
         app.activate()

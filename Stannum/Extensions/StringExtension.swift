@@ -12,7 +12,8 @@ extension String {
      Extension to XCUIApplication
      
      Generate random string that consist onle latin latters in upper and lower case
-     -Parameters length: length of Random string
+     
+     - Parameter length: length of Random string
      */
     public func random(strLength length: Int) -> String {
         let letters : NSString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
