@@ -17,6 +17,7 @@ open class SettingsUtils {
         
         XCTContext.runActivity(named: "turn wifi on: \(isTurnedOn)") { _ in
             let wifi = settings.tables.staticTexts["Wi-Fi"];
+            wifi.scrollToHittable(app: settings)
             guard wifi.waitForHittable() else {
                 XCTFail("Wi-fi isn't hittable")
                 return
