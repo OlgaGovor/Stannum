@@ -8,6 +8,12 @@
 
 extension String {
     
+    /**
+     Extension to XCUIApplication
+     
+     Generate random string that consist onle latin latters in upper and lower case
+     -Parameters length: length of Random string
+     */
     public func random(strLength length: Int) -> String {
         let letters : NSString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
         let len = UInt32(letters.length)
@@ -21,6 +27,17 @@ extension String {
         return randomString
     }
     
+    /**
+     Extension to XCUIApplication
+     
+     Convert string to Bool:
+     
+     - Returns: boolean false/true
+     
+     - true: True, true, yes, 1
+     
+     - false: False, false, no, 0
+     */
     public func toBool() -> Bool? {
         switch self {
             case "True", "true", "yes", "1": return true
